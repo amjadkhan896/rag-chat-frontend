@@ -41,11 +41,11 @@ const ChatContainer: React.FC = () => {
                   <i className="bi bi-robot text-primary" style={{ fontSize: '2rem' }}></i>
                 </div>
                 <div>
-                  <h4 className="mb-0">RAG Chat Assistant</h4>
-                  <small className="text-muted">Powered by AI and your knowledge base</small>
+                  <h4 className="mb-0">RAG Chat</h4>
+                  <small className="text-muted">Powered by AI</small>
                 </div>
               </div>
-            </Col>
+            </Col>  
           </Row>
         </div>
       </header>

@@ -2,7 +2,6 @@
 
 A modern, responsive chat interface for RAG (Retrieval-Augmented Generation) backends, built with Next.js, Redux, and Bootstrap. Designed to look and feel like DeepSeek's chat interface with a sleek dark theme.
 
-
 ## Tech Stack
 
 - **Framework**: Next.js 14 with App Router
@@ -14,10 +13,10 @@ A modern, responsive chat interface for RAG (Retrieval-Augmented Generation) bac
 
 ## Getting Started
 
-
 ### Installation
 
 1. **Clone and install dependencies:**
+
 ```bash
 npm install
 # or
@@ -25,21 +24,25 @@ yarn install
 ```
 
 2. **Environment Setup:**
+
 ```bash
 cp .env.local.example .env.local
 ```
 
 Edit `.env.local` with your configuration:
+
 ```env
 # Development Server Configuration
 PORT=3000
 
-# API Configuration  
+# API Configuration
 NEXT_PUBLIC_API_URL=http://localhost:8080
 NEXT_PUBLIC_X_API_KEY=0dabf354ce8f4f10bef0903494a42d97
+NEXT_PUBLIC_AUTH_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NTU2MzEyNjgsImV4cCI6MTc4NzE2ODcwMSwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIm5hbWUiOiJBbWphZCBLaGFuIiwiZW1haWwiOiJhbTEyM0BleGFtcGxlLmNvbSIsInVzZXJJZCI6InVzZXIxMjMifQ.ukOw0n29alKE-xLSbst9N8LGC8OwOoh-jL2EVIXhEkY
 ```
 
 3. **Run the development server:**
+
 ```bash
 npm run dev
 # or
@@ -47,12 +50,11 @@ yarn dev
 ```
 
 4. **Open your browser:**
-Navigate to [http://localhost:3000](http://localhost:3000)
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## API Integration
 
 This frontend is designed to work with RAG chat backends that provide the following endpoints:
-
 
 ## Project Structure
 
@@ -81,8 +83,9 @@ src/
 ```
 
 ## Key Features
- 
+
 ### 💬 Chat Interface
+
 - Real-time message
 - Markdown rendering with syntax highlighting
 - Message history with timestamps
@@ -90,40 +93,43 @@ src/
 - Typing indicators for streaming responses
 
 ### 📱 Responsive Design
+
 - Mobile-first approach
 - Collapsible sidebar on mobile
 - Touch-friendly interface
 - Adaptive layouts for all screen sizes
- 
 
 ## Customization
 
- 
-```
+````
 
 ### API Configuration
 Update API endpoints in `src/services/api.ts`:
 ```typescript
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
-```
- 
+````
+
 ## Development
 
 ### Scripts
+
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 
 ### Adding New Features
+
 1. Define types in `src/types/`
 2. Add Redux actions/reducers in `src/store/slices/`
 3. Create components in `src/components/`
 4. Add API methods in `src/services/api.ts`
 5. Update styling in `src/app/globals.css`
-  
+
 ### Environment Variables
+
 Set these in your production environment:
+
 - `NEXT_PUBLIC_API_URL` - Your backend API URL
 - `NEXT_PUBLIC_X_API_KEY` - Your backend API URL
 - `NODE_ENV=production`
